@@ -232,7 +232,7 @@ function callthebird() {
 $('#replayButton').on('click', function (e) {
     e.preventDefault();
     $("body").fadeOut(1000, function () {
-        window.location.replace("index.html");
+        window.location = 'index.html';
     })
 });
 $('#exitButton').on('click', function (e) {

@@ -10,7 +10,7 @@ $(document).ready(function () {
     }, 1000);
     $('#playButton').on('click', function (e) {
         e.preventDefault();
-        var name = $('#name').val();
+        var name = $.trim($('#name').val());
         flag = 0;
         if (name == '' || name.length > 8) {
             flag = 1;

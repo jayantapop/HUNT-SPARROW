@@ -274,13 +274,12 @@ function showQuotes() {
     $("#quotes").html("“" + selectedQuote + "”");
     $("#quotes").removeClass("fadeOutDown").addClass("fadeInUp");
     //		console.log(Date()+": Refreshing in 5 secs");
-    window.setTimeout(hideQuotes, 4000);
+    window.setTimeout(hideQuotes, 3000);
 }
 
 function hideQuotes() {
     $("#quotes").removeClass("fadeInUp").addClass("fadeOutDown");
     if ($("body").hasClass("hide_overflow")) {
-        //console.log(Date()+": Showing again");
         window.setTimeout(showQuotes, 500);
     }
 }
@@ -288,17 +287,8 @@ $(window).load(function () {
     $("body").removeClass("hide_overflow");
     $("html").removeClass("hide_overflow");
     $("#preloader").fadeOut();
-    if (scrolled == 0) {
-        $(".scroll-arrow").css("opacity", "1");
-        window.setTimeout(showDots, 2000);
-    }
+
 });
 
-function showDots() {
-    for (var i = 0; i < 300; i++) {
-        $(".dots").height(i);
-        //console.log("height"+i+"px");
-    };
-}
 
 /*================ Custom Preloder End ================*/

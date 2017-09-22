@@ -274,7 +274,7 @@ function showQuotes() {
     $("#quotes").html("“" + selectedQuote + "”");
     $("#quotes").removeClass("fadeOutDown").addClass("fadeInUp");
     //		console.log(Date()+": Refreshing in 5 secs");
-    window.setTimeout(hideQuotes, 3000);
+    window.setTimeout(hideQuotes, 2000);
 }
 
 function hideQuotes() {
